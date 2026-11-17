@@ -1,6 +1,6 @@
 {
   "name": "@falcondev-oss/bao-run",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run a command with secrets from OpenBao, like `infisical run`: AppRole login, one KV v2 secret as environment, no dependencies",
   "keywords": [
     "approle",
