@@ -28,6 +28,3 @@ jobs:
 
       - name: Publish
         run: pnpm publish --access=public --provenance --no-git-checks --tag $(npx simple-dist-tag)
-        env:
-          # first publish only, later releases use npm trusted publishing
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
