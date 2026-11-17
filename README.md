@@ -15,9 +15,9 @@ bao-run -- node server/index.mjs
 | `BAO_SECRET_ID`   | Secret ID of the AppRole                                                        |
 | `BAO_SECRET_PATH` | Path of the secret in the KV v2 engine mounted at `secret/`, e.g. `my-app/prod` |
 
-The keys of the secret override variables of the same name. The command does not see `BAO_ROLE_ID` and `BAO_SECRET_ID`.
+The keys of the secret override variables of the same name. The command does not see `BAO_ROLE_ID` and `BAO_SECRET_ID`. Every value of the secret must be a string.
 
-`bao-run` forwards `SIGTERM`, `SIGINT` and `SIGHUP` to the command and exits with its exit code. It exits with `1` if OpenBao rejects the login or the read, and with `127` if the command does not exist.
+`bao-run` forwards `SIGTERM`, `SIGINT` and `SIGHUP` to the command and exits with its exit code. It exits with `1` if OpenBao rejects the login or the read or a value is not a string, and with `127` if the command does not exist.
 
 ## Docker
 

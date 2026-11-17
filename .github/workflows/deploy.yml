@@ -1,12 +1,10 @@
-# eslint-disable no-irregular-whitespace, yaml/no-irregular-whitespace
-# prettier-ignore
 name:  
 
 on:
   workflow_call:
     inputs:
       ref:
-        description: "Force checkout a specific git ref (branch, tag, commit)"
+        description: 'Force checkout a specific git ref (branch, tag, commit)'
         type: string
 
 concurrency:
