@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022", "dom"],
+    "moduleDetection": "force",
+
+    "module": "preserve",
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "allowJs": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+
+    "declaration": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "tests/**/*", "tsdown.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}

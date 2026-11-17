@@ -1,0 +1,60 @@
+{
+  "name": "@falcondev-oss/bao-run",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Run a command with secrets from OpenBao, like `infisical run`: AppRole login, one KV v2 secret as environment, no dependencies",
+  "license": "Apache-2.0",
+  "repository": "github:falcondev-oss/bao-run",
+  "bugs": {
+    "url": "https://github.com/falcondev-oss/bao-run/issues"
+  },
+  "keywords": [
+    "openbao",
+    "vault",
+    "secrets",
+    "approle",
+    "docker",
+    "cli"
+  ],
+  "bin": {
+    "bao-run": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26",
+      "onFail": "warn"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "warn"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint --cache . && prettier --check --cache .",
+    "lint:ci": "eslint --cache --cache-strategy content . && prettier --check --cache --cache-strategy content .",
+    "lint:fix": "eslint --fix --cache . && prettier --write --cache .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@falcondev-oss/configs": "^6.0.6",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "tsdown": "0.23.4",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "changelogithub": {
+    "extends": "gh:falcondev-it/configs/changelogithub"
+  }
+}
